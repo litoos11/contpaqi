@@ -2,6 +2,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Xml;
+using System.Xml.Serialization;
 using Contpaqi.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -35,12 +36,14 @@ public class XmlController : ControllerBase
       }
 
       string result = Encoding.UTF8.GetString(bytes);
-      // To convert an XML node contained in string xml into a JSON string   
+
       XmlDocument xmlDocument = new XmlDocument();
       xmlDocument.LoadXml(result);
       string jsonText = JsonConvert.SerializeXmlNode(xmlDocument);
 
-      return Ok(jsonText);
+      Comprobante? comprobante = JsonConvert.DeserializeObject<Comprobante>(jsonText);
+
+      return Ok(comprobante);
     }
     catch (Exception e)
     {
