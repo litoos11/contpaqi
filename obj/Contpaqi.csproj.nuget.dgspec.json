@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\COOR\\Desktop\\AOS\\Personal\\Works\\Contpaqi\\Contpaqi\\Contpaqi.csproj": {}
+    "c:\\Users\\COOR\\Desktop\\AOS\\Personal\\Works\\Contpaqi\\Contpaqi\\Contpaqi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\COOR\\Desktop\\AOS\\Personal\\Works\\Contpaqi\\Contpaqi\\Contpaqi.csproj": {
+    "c:\\Users\\COOR\\Desktop\\AOS\\Personal\\Works\\Contpaqi\\Contpaqi\\Contpaqi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\COOR\\Desktop\\AOS\\Personal\\Works\\Contpaqi\\Contpaqi\\Contpaqi.csproj",
+        "projectUniqueName": "c:\\Users\\COOR\\Desktop\\AOS\\Personal\\Works\\Contpaqi\\Contpaqi\\Contpaqi.csproj",
         "projectName": "Contpaqi",
-        "projectPath": "C:\\Users\\COOR\\Desktop\\AOS\\Personal\\Works\\Contpaqi\\Contpaqi\\Contpaqi.csproj",
+        "projectPath": "c:\\Users\\COOR\\Desktop\\AOS\\Personal\\Works\\Contpaqi\\Contpaqi\\Contpaqi.csproj",
         "packagesPath": "C:\\Users\\COOR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\COOR\\Desktop\\AOS\\Personal\\Works\\Contpaqi\\Contpaqi\\obj\\",
+        "outputPath": "c:\\Users\\COOR\\Desktop\\AOS\\Personal\\Works\\Contpaqi\\Contpaqi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -47,6 +47,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.10, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
