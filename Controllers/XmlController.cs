@@ -1,3 +1,4 @@
+using System.Net;
 using System.Text;
 using System.Xml.Serialization;
 using Contpaqi.Entities;
@@ -31,14 +32,27 @@ public class XmlController : ControllerBase
       }
       catch (Exception e)
       {
-        return BadRequest(e.Message);
+        _logger.LogError(e.Message);
+        ErrorResponse errorResponse = new()
+        {
+          Status = HttpStatusCode.BadRequest.GetHashCode(),
+          Title = "Error al decodificar el xml",
+          Detail = "El base64 proporcionado no es válido para su decodificación.",
+        };
+        return BadRequest(errorResponse);
       }
 
       string result = Encoding.UTF8.GetString(bytes);
       string pathXsd = Environment.CurrentDirectory + "/Resources/comprobante.xsd";
       if (!System.IO.File.Exists(pathXsd))
       {
-        return BadRequest("No se encontro el archivo xsd");
+        ErrorResponse errorResponse = new()
+        {
+          Status = HttpStatusCode.BadRequest.GetHashCode(),
+          Title = "Error al validar el xml",
+          Detail = "No se encontro el archivo xsd necesario para validar el Xml proporcionado.",
+        };
+        return BadRequest(errorResponse);
       }
       _xmlServices.ValidateXml(result, pathXsd);
 
@@ -49,16 +63,27 @@ public class XmlController : ControllerBase
 
       if (comprobante == null)
       {
-        return BadRequest("No se pudo deserializar el xml");
+        ErrorResponse errorResponse = new()
+        {
+          Status = HttpStatusCode.BadRequest.GetHashCode(),
+          Title = "Error al deserializar el xml",
+          Detail = "No se pudo deserializar el xml proporcionado.",
+        };
       }
 
       return Ok(new { Comprobante = comprobante });
     }
     catch (Exception e)
     {
-      //TODO: Armar mensaje de error 
       _logger.LogError(e.Message);
-      return BadRequest(e.Message);
+      ErrorResponse errorResponse = new()
+      {
+        Status = HttpStatusCode.BadRequest.GetHashCode(),
+        Title = "Error al procesar el xml",
+        Detail = e.Message,
+        Errors = [e.Message]
+      };
+      return BadRequest(errorResponse);
     }
 
   }
