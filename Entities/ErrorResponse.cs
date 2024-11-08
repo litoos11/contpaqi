@@ -1,6 +1,6 @@
 namespace Contpaqi.Entities;
 
-public class XmlResponse
+public class ErrorResponse
 {
   public required int Status { get; set; }
   public required string Title { get; set; }

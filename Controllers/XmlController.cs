@@ -1,11 +1,7 @@
-using System.Net.Http.Json;
 using System.Text;
-using System.Text.Json.Serialization;
-using System.Xml;
 using System.Xml.Serialization;
 using Contpaqi.Entities;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace Contpaqi.Controllers;
 
@@ -21,7 +17,7 @@ public class XmlController : ControllerBase
   }
 
   [HttpPost]
-  public async Task<IActionResult> Post([FromBody] XmlRequest xml)
+  public IActionResult Post([FromBody] XmlRequest xml)
   {
     try
     {
@@ -34,19 +30,25 @@ public class XmlController : ControllerBase
       {
         return BadRequest(e.Message);
       }
+      //TODO: Validar contra el xsd
 
       string result = Encoding.UTF8.GetString(bytes);
+      XmlSerializer serializer = new(typeof(Comprobante));
 
-      XmlDocument xmlDocument = new XmlDocument();
-      xmlDocument.LoadXml(result);
-      string jsonText = JsonConvert.SerializeXmlNode(xmlDocument);
+      using StringReader reader = new(result);
+      Comprobante comprobante = (Comprobante)serializer.Deserialize(reader)!;
 
-      Comprobante? comprobante = JsonConvert.DeserializeObject<Comprobante>(jsonText);
+      if (comprobante == null)
+      {
+        return BadRequest("No se pudo deserializar el xml");
+      }
 
-      return Ok(comprobante);
+      return Ok(new { Comprobante = comprobante });
     }
     catch (Exception e)
     {
+      //TODO: Armar mensaje de error 
+      _logger.LogError(e.Message);
       return BadRequest(e.Message);
     }
 
