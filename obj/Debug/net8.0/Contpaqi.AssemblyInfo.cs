@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Contpaqi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ecb6c1b25414210097b98029063ee1776a3fc6f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33b7dc2f440b23bbaa61a6fee63e1a0c49015569")]
 [assembly: System.Reflection.AssemblyProductAttribute("Contpaqi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Contpaqi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
