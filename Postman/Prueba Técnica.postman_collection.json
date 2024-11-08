@@ -7,71 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "WeatherForecast",
-			"request": {
-				"auth": {
-					"type": "oauth2",
-					"oauth2": [
-						{
-							"key": "client_authentication",
-							"value": "body",
-							"type": "string"
-						},
-						{
-							"key": "clientSecret",
-							"value": "lkNo6fC-NVSJYy5rGLiNHqs4z4AwhwamD1TrRTqE_CD3vxvrWKlAuZBecbeSdygB",
-							"type": "string"
-						},
-						{
-							"key": "clientId",
-							"value": "epBAbL2TSzmaJ9BL7nSGkL0MT3a42vfY",
-							"type": "string"
-						},
-						{
-							"key": "accessTokenUrl",
-							"value": "https://dev-otrwvksw.us.auth0.com/oauth/token",
-							"type": "string"
-						},
-						{
-							"key": "useBrowser",
-							"value": true,
-							"type": "boolean"
-						},
-						{
-							"key": "authUrl",
-							"value": "https://dev-otrwvksw.us.auth0.com/authorize?audience=https://invoice-transformation.cti.com",
-							"type": "string"
-						},
-						{
-							"key": "tokenName",
-							"value": "Auth0",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:5259/WeatherForecast",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5259",
-					"path": [
-						"WeatherForecast"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "xml",
+			"name": "xml(Ok1)",
 			"request": {
 				"auth": {
 					"type": "oauth2",
@@ -123,6 +59,80 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"xml\": \"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPENvbXByb2JhbnRlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIFZlcnNpb249IjQuMCIgTHVnYXJFeHBlZGljaW9uPSI0NDYwMCIgTWV0b2RvUGFnbz0iUFVFIiBGb3JtYVBhZ289IkVGRSIgVGlwb0RlQ29tcHJvYmFudGU9IkkiIEZvbGlvPSI0Nzg5NjUiIE1vbmVkYT0iTVhOIiBTZXJpZT0iTVhOIiBGZWNoYT0iMjAyNC0wNS0yOFQxMjozNTowMCIgVG90YWw9IjE4NjguNzIiIFN1YlRvdGFsPSIxOTYwLjIwIiBVVUlEPSJiZWRhNWRiOC1kZTZiLTQ1MzEtOGVkMi1hMDliMzNhNzZjMDciPgogIDxFbWlzb3IgTm9tYnJlPSJYT0NISUxUIENBU0FTIENIQVZFWiIgUmZjPSJDQUNYNzYwNTEwMVA4Ii8+CiAgPFJlY2VwdG9yIE5vbWJyZT0iTUFRVUlOQVJJQSBJTkdFTklFUklBIFkgQ09OU1RSVUNDSU9ORVMgREVMIFNVUkVTVEUgU0EgREUgQ1YiIFJmYz0iTUlDOTcwMjIxSkc1IiAvPgogIDxDb25jZXB0b3M+CiAgICA8Q29uY2VwdG8gTm9JZGVudGlmaWNhY2lvbj0iQ09OU1VMNzc4IiBDbGF2ZVByb2RTZXJ2PSI4NTEyMTYwMCIgRGVzY3JpcGNpb249IlNlcnZpY2lvcyBkZSBnYXN0cm9lbnRlcsOzbG9nb3MiIENsYXZlVW5pZGFkPSJFNDgiIFZhbG9yVW5pdGFyaW89Ijk4MC4xIiBDYW50aWRhZD0iMiIgSW1wb3J0ZT0iMTk2MC4yMCIgT2JqZXRvSW1wPSIwMiIgLz4KICA8L0NvbmNlcHRvcz4KICA8SW1wdWVzdG9zIFRvdGFsSW1wdWVzdG9zUmV0ZW5pZG9zPSI0MDUuMTEiIFRvdGFsSW1wdWVzdG9zVHJhc2xhZGFkb3M9IjMxMy42MyIgLz4KPC9Db21wcm9iYW50ZT4K\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5259/api/xml",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5259",
+					"path": [
+						"api",
+						"xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "xml(OkN)",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "client_authentication",
+							"value": "body",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "lkNo6fC-NVSJYy5rGLiNHqs4z4AwhwamD1TrRTqE_CD3vxvrWKlAuZBecbeSdygB",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "epBAbL2TSzmaJ9BL7nSGkL0MT3a42vfY",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://dev-otrwvksw.us.auth0.com/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://dev-otrwvksw.us.auth0.com/authorize?audience=https://invoice-transformation.cti.com",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Auth0",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"xml\": \"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPENvbXByb2JhbnRlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIFZlcnNpb249IjQuMCIgTHVnYXJFeHBlZGljaW9uPSI0NDYwMCIgTWV0b2RvUGFnbz0iUFVFIiBGb3JtYVBhZ289IkVGRSIgVGlwb0RlQ29tcHJvYmFudGU9IkkiIEZvbGlvPSI0Nzg5NjUiIE1vbmVkYT0iTVhOIiBTZXJpZT0iTVhOIiBGZWNoYT0iMjAyNC0wNS0yOFQxMjozNTowMCIgVG90YWw9IjE4NjguNzIiIFN1YlRvdGFsPSIxOTYwLjIwIiBVVUlEPSJiZWRhNWRiOC1kZTZiLTQ1MzEtOGVkMi1hMDliMzNhNzZjMDciPgogIDxFbWlzb3IgTm9tYnJlPSJYT0NISUxUIENBU0FTIENIQVZFWiIgUmZjPSJDQUNYNzYwNTEwMVA4Ii8+CiAgPFJlY2VwdG9yIE5vbWJyZT0iTUFRVUlOQVJJQSBJTkdFTklFUklBIFkgQ09OU1RSVUNDSU9ORVMgREVMIFNVUkVTVEUgU0EgREUgQ1YiIFJmYz0iTUlDOTcwMjIxSkc1IiAvPgogIDxDb25jZXB0b3M+CiAgICA8Q29uY2VwdG8gTm9JZGVudGlmaWNhY2lvbj0iQ09OU1VMNzc4IiBDbGF2ZVByb2RTZXJ2PSI4NTEyMTYwMCIgRGVzY3JpcGNpb249IlNlcnZpY2lvcyBkZSBnYXN0cm9lbnRlcsOzbG9nb3MiIENsYXZlVW5pZGFkPSJFNDgiIFZhbG9yVW5pdGFyaW89Ijk4MC4xIiBDYW50aWRhZD0iMiIgSW1wb3J0ZT0iMTk2MC4yMCIgT2JqZXRvSW1wPSIwMiIgLz4KICAgIDxDb25jZXB0byBOb0lkZW50aWZpY2FjaW9uPSJDT05TVUw3NzkiIENsYXZlUHJvZFNlcnY9Ijg1MTIxNjAwIiBEZXNjcmlwY2lvbj0iU2VydmljaW9zIG51dHJpY2lvbmFsZXMiIENsYXZlVW5pZGFkPSJFNDgiIFZhbG9yVW5pdGFyaW89Ijk4MC4xIiBDYW50aWRhZD0iMSIgSW1wb3J0ZT0iOTgwLjEiIE9iamV0b0ltcD0iMDMiIC8+CiAgICA8Q29uY2VwdG8gTm9JZGVudGlmaWNhY2lvbj0iQ09OU1VMNzcwIiBDbGF2ZVByb2RTZXJ2PSI4NTEyMTYwMCIgRGVzY3JpcGNpb249IlNlcnZpY2lvcyBkZW50YWxlcyIgQ2xhdmVVbmlkYWQ9IkU0OCIgVmFsb3JVbml0YXJpbz0iMTAwMC4wIiBDYW50aWRhZD0iMSIgSW1wb3J0ZT0iMTAwMC4wIiBPYmpldG9JbXA9IjAxIiAvPgogIDwvQ29uY2VwdG9zPgogIDxJbXB1ZXN0b3MgVG90YWxJbXB1ZXN0b3NSZXRlbmlkb3M9IjQwNS4xMSIgVG90YWxJbXB1ZXN0b3NUcmFzbGFkYWRvcz0iMzEzLjYzIiAvPgo8L0NvbXByb2JhbnRlPg==\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
