@@ -1,3 +1,4 @@
+using contpaqi.Middlewares;
 using Contpaqi.Services;
 using Microsoft.OpenApi.Models;
 
@@ -84,6 +85,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseErrorResponse();
 app.UseRouting();
 app.UseAuthorization();
 
