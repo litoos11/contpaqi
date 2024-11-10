@@ -79,7 +79,7 @@ public class XmlController : ControllerBase
       ErrorResponse errorResponse = new()
       {
         Status = HttpStatusCode.BadRequest.GetHashCode(),
-        Title = "Error al procesar el xml",
+        Title = "Error al procesar el xml.",
         Detail = e.Message,
         Errors = [e.Message]
       };
