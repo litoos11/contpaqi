@@ -70,8 +70,26 @@ public class XmlController : ControllerBase
           Detail = "No se pudo deserializar el xml proporcionado.",
         };
       }
-
-      return Ok(new { Comprobante = comprobante });
+      var customComprobante = new
+      {
+        comprobante!.Version,
+        comprobante.LugarExpedicion,
+        comprobante.MetodoPago,
+        comprobante.TipoDeComprobante,
+        comprobante.FormaPago,
+        comprobante.Folio,
+        comprobante.Moneda,
+        comprobante.Serie,
+        comprobante.UUID,
+        comprobante.Fecha,
+        comprobante.Total,
+        comprobante.SubTotal,
+        comprobante.Emisor,
+        comprobante.Receptor,
+        Conceptos = comprobante.Conceptos.Select(c => new { Concepto = c }).ToArray(),
+        comprobante.Impuestos
+      };
+      return Ok(new { Comprobante = customComprobante });
     }
     catch (Exception e)
     {
